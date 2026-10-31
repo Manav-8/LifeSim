@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17251f"><title>LifeSim: Bellwether</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar" class="topbar hidden">
+    <div class="brand"><span class="brand-mark">B</span><div><strong>BELLWETHER</strong><small>A LIFE IN THE MAKING</small></div></div>
+    <div class="status-row">
+      <div class="stat"><small>AGE</small><b id="ageStat">3</b></div>
+      <div class="stat"><small>ENERGY</small><b id="energyStat">100</b></div>
+      <div class="stat"><small>MOOD</small><b id="moodStat">Content</b></div>
+      <div class="stat"><small>COINS</small><b id="moneyStat">12</b></div>
+      <div class="stat identity-stat"><small>IDENTITY</small><b id="identityStat">Unwritten</b></div>
+    </div>
+    <button class="top-icon" id="pauseBtn" title="Pause / menu">Ⅱ</button>
+  </header>
+  <main id="gameLayout" class="game-layout hidden">
+    <section class="world-panel">
+      <div class="world-caption"><span class="live-dot"></span><span id="locationCaption">Bellwether · Home Lane</span><span id="weatherCaption">CLEAR · SPRING</span></div>
+      <canvas id="world" width="960" height="620" aria-label="Bellwether town. Use WASD or arrow keys to move."></canvas>
+      <div class="world-controls"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> MOVE</span><span><kbd>E</kbd> INTERACT</span><span><kbd>J</kbd> JOURNAL</span></div>
+      <div id="nearbyHint" class="nearby-hint">Explore Bellwether. Walk near a place or person and press E.</div>
+    </section>
+    <aside class="side-panel">
+      <div class="side-heading"><div><small id="phaseLabel">CHILDHOOD · AGE 3–6</small><h2 id="panelTitle">A small beginning</h2></div><span class="sun-icon">✦</span></div>
+      <div id="sideContent" class="side-content"></div>
+      <div class="side-actions">
+        <button class="action-btn" id="interactBtn">Interact <span>E ↗</span></button>
+        <button class="action-btn secondary" id="activityBtn">Choose an activity <span>＋</span></button>
+      </div>
+      <div class="quick-actions">
+        <button data-panel="journal">✎<span>Journal</span></button>
+        <button data-panel="map">⌖<span>Town map</span></button>
+        <button data-panel="inventory">▤<span>Bag</span></button>
+        <button data-panel="identities">✧<span>Identities</span></button>
+      </div>
+    </aside>
+  </main>
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast" role="status"></div>
+</div>
+<script src="src/game.js"></script>
+</body>
+</html>

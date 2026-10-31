@@ -1,0 +1,16 @@
+# Development and operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+
+# Local dependencies and generated output
+node_modules/
+dist/
+coverage/
+
+# Planning and QA documents, not part of the playable game
+/MILESTONES_1-15.md
+/QA_REPORT.md

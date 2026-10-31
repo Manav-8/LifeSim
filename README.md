@@ -61,3 +61,7 @@ The game stores saves in your browser's local storage. With `RUN_GAME.bat`, use 
 ## Dependencies
 
 None. The game uses browser-native Canvas 2D, JavaScript, CSS and localStorage. Google Fonts are an optional visual enhancement; system-font fallbacks are included.
+
+## Publish with GitHub Pages
+
+The repository includes a GitHub Actions workflow that publishes the game whenever changes are pushed to `main`. In the repository settings, open **Pages** and set the build and deployment source to **GitHub Actions**. After the first successful workflow run, open the Pages URL shown in the workflow summary. The game and its assets use relative paths, so they work from the repository's Pages URL.
